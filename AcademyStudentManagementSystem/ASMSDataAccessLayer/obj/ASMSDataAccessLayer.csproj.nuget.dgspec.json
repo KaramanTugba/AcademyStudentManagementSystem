@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\ASMSDataAccessLayer.csproj": {}
+    "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\ASMSDataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\ASMSDataAccessLayer.csproj": {
+    "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\ASMSDataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\ASMSDataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\ASMSDataAccessLayer.csproj",
         "projectName": "ASMSDataAccessLayer",
-        "projectPath": "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\ASMSDataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\ASMSDataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\303TUGBA_SABAH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\303TUGBA_SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj": {
-                "projectPath": "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj"
+              "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj": {
+                "projectPath": "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj"
               }
             }
           }
@@ -88,14 +88,14 @@
         }
       }
     },
-    "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj": {
+    "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj",
         "projectName": "ASMSEntityLayer",
-        "projectPath": "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj",
+        "projectPath": "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj",
         "packagesPath": "C:\\Users\\303TUGBA_SABAH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSEntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSEntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\303TUGBA_SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5tJJ+nMvEfb3p5N6aGqOuaGto9UvgSBEt65vXPm3vaRwvQ8XRxOtOZWpFMoedeKEhIHi0+FgrIdlIN0tzf6X3A==",
+  "dgSpecHash": "qbkWesOW6J+aZfs1XA+H+wBCEhZN10e+c6z+v2ucUXvq++cn3E/R0Uzvtp8xbjYdSyijOtW2kx/RSiF8CLU1ng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSBusinessLayer\\ASMSBusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSBusinessLayer\\ASMSBusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\303TUGBA_SABAH\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\303TUGBA_SABAH\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.14\\microsoft.aspnetcore.cryptography.internal.5.0.14.nupkg.sha512",

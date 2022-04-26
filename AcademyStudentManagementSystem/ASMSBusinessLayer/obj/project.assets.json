@@ -6002,11 +6002,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSBusinessLayer\\ASMSBusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSBusinessLayer\\ASMSBusinessLayer.csproj",
       "projectName": "ASMSBusinessLayer",
-      "projectPath": "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSBusinessLayer\\ASMSBusinessLayer.csproj",
+      "projectPath": "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSBusinessLayer\\ASMSBusinessLayer.csproj",
       "packagesPath": "C:\\Users\\303TUGBA_SABAH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSBusinessLayer\\obj\\",
+      "outputPath": "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSBusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\303TUGBA_SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6023,11 +6023,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\ASMSDataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\ASMSDataAccessLayer.csproj"
+            "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\ASMSDataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSDataAccessLayer\\ASMSDataAccessLayer.csproj"
             },
-            "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj": {
-              "projectPath": "C:\\Users\\303TUGBA_SABAH\\source\\repos\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj"
+            "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj": {
+              "projectPath": "C:\\Users\\303TUGBA_SABAH\\Desktop\\AcademyStudentManagementSystem\\AcademyStudentManagementSystem\\ASMSEntityLayer\\ASMSEntityLayer.csproj"
             }
           }
         }

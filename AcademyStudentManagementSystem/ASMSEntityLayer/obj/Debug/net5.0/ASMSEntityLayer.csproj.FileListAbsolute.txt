@@ -1,0 +1,15 @@
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\bin\Debug\net5.0\ASMSEntityLayer.deps.json
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\bin\Debug\net5.0\ASMSEntityLayer.runtimeconfig.json
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\bin\Debug\net5.0\ASMSEntityLayer.runtimeconfig.dev.json
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\bin\Debug\net5.0\ASMSEntityLayer.dll
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\bin\Debug\net5.0\ref\ASMSEntityLayer.dll
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\bin\Debug\net5.0\ASMSEntityLayer.pdb
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\obj\Debug\net5.0\ASMSEntityLayer.csproj.AssemblyReference.cache
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\obj\Debug\net5.0\ASMSEntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\obj\Debug\net5.0\ASMSEntityLayer.AssemblyInfoInputs.cache
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\obj\Debug\net5.0\ASMSEntityLayer.AssemblyInfo.cs
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\obj\Debug\net5.0\ASMSEntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\obj\Debug\net5.0\ASMSEntityLayer.dll
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\obj\Debug\net5.0\ref\ASMSEntityLayer.dll
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\obj\Debug\net5.0\ASMSEntityLayer.pdb
+C:\Users\303TUGBA_SABAH\source\repos\AcademyStudentManagementSystem\ASMSEntityLayer\obj\Debug\net5.0\ASMSEntityLayer.genruntimeconfig.cache

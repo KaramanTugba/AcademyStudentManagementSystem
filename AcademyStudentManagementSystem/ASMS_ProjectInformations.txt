@@ -1,0 +1,6 @@
+Package
+	- Microsoft.EntityFrameworkCore -> 5.0.14v
+	- Microsoft.EntityFrameworkCore.SqlServer -> 5.0.14v
+	- Microsoft.EntityFrameworkCore.Tools -> 5.0.14v
+	- Microsoft.EntityFrameworkCore.Design -> 5.0.14v
+	- Microsoft.AspnetCore.Identity.EntityFrameworkCore -> 5.0.14v

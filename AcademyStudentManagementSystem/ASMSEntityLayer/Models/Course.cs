@@ -15,7 +15,10 @@ namespace ASMSEntityLayer.Models
         [StringLength(50,MinimumLength =2, ErrorMessage ="Kurs adı 2 ile 50 arasında olmalıdır.")]
         public string CourseName { get; set; }
 
-        
-      
+
+        //ilişkinin karşılığı
+        public virtual ICollection<CourseGroup> CourseGroups { get; set; }
+
+
     }
 }

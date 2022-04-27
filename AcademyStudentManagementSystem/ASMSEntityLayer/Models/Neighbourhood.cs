@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ASMSEntityLayer.Models
 {
-    [Table("Neighbourhood")]
+    [Table("Neighbourhoods")]
     public class Neighbourhood
     {
         [Required]

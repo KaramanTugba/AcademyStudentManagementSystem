@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ASMSEntityLayer.Models
 {
-    [Table("District")]
+    [Table("Districts")]
     public class District:Base<int>
     {
         [Required]

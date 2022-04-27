@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 namespace ASMSEntityLayer.Models
 {
     [Table("CourseGroups")]
+    //[Index(nameof(PortalCode),IsUnique=true)] //Context classında OnModelCreating methodunu ezerek yazacağız.
     public class CourseGroup:Base<int>
     {
         public int ClassId { get; set; }

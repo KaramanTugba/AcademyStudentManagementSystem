@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ASMSEntityLayer.Models
 {
     [Table("Neighbourhoods")]
-    public class Neighbourhood
+    public class Neighbourhood:Base<int>
     {
         [Required]
         [StringLength(50, MinimumLength = 2, ErrorMessage = "Mahalle adı 2 ile 50 karakter arasında olmalıdır.")]    

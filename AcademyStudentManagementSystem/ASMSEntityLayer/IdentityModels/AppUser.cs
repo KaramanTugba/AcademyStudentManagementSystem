@@ -24,13 +24,17 @@ namespace ASMSEntityLayer.IdentityModels
         [StringLength(11, MinimumLength = 11, ErrorMessage = "T.C. Kimlik numarası 11 karakter olmalıdır.")]
         public string TCNumber { get; set; }
         public string Picture { get; set; }
+
         [DataType(DataType.Date)]
         public DateTime? BirthDate { get; set; }
+
         [Required(ErrorMessage = "Cinsiyet seçimi gereklidir.")]
         public Genders Gender { get; set; }
         public bool IsDeleted { get; set; } = false;
 
         //ilişkiler
         public virtual ICollection<UsersAddress> UsersAddresses { get; set; }
+        public virtual ICollection<Teacher> Teachers { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using ASMSEntityLayer.IdentityModels;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,16 +8,15 @@ using System.Threading.Tasks;
 
 namespace ASMSEntityLayer.Models
 {
-    [Table("Teachers")]
-    public class Teacher:PersonBase
+    [Table("Students")]
+    public class Student:PersonBase
     {
-        //public string TCNumber { get; set; }
         public string UserId { get; set; }
 
-       [ForeignKey("UserId")]
+        [ForeignKey("UserId")]
         public virtual AppUser AppUser { get; set; }
 
-        //ilişki karşılığı
-        public virtual ICollection<CourseGroup> CourseGroups { get; set; }
+        //ilişkinin karşılığı öğrencinin kurslarını eğitimlerini listesi
+        public virtual ICollection<StudentsCourseGroup> Courses { get; set; }
     }
 }

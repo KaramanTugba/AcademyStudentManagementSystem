@@ -4,3 +4,5 @@ Package
 	- Microsoft.EntityFrameworkCore.Tools -> 5.0.14v
 	- Microsoft.EntityFrameworkCore.Design -> 5.0.14v
 	- Microsoft.AspnetCore.Identity.EntityFrameworkCore -> 5.0.14v
+	- AutoMapper -> 9.0
+	- AutoMapper.Extensions.Microsoft.DependencyInjection -> 7.0

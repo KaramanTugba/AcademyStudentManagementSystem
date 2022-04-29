@@ -1,15 +1,11 @@
 ﻿using ASMSEntityLayer.IdentityModels;
 using ASMSEntityLayer.Models;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ASMSEntityLayer.ViewModels
 {
-   public class UserAddressVM
+    public class UsersAddressVM
     {
         public int Id { get; set; }
         public DateTime CreatedDate { get; set; }
@@ -20,7 +16,7 @@ namespace ASMSEntityLayer.ViewModels
         [StringLength(50, MinimumLength = 2, ErrorMessage = "Adres başlığı 2 ile 50 karakter aralığında olmalıdır.")]
         public string AddresTitle { get; set; }
 
-        [Required(ErrorMessage ="Mahalle seçimi gereklidir.")]
+        [Required(ErrorMessage = "Mahalle seçimi gereklidir.")]
         public int NeighbourhoodId { get; set; }
 
         [StringLength(500, ErrorMessage = "Adres detayı en çok 500 karakter olmalıdır.")]
@@ -29,11 +25,10 @@ namespace ASMSEntityLayer.ViewModels
         [StringLength(5, MinimumLength = 5, ErrorMessage = "Posta kodu 5 karakter olmalıdır.")]
         public string PostCode { get; set; }
         public AppUser AppUser { get; set; }
-        public Neighbourhood Neighbourhood { get; set; }
+        public NeighbourhoodVM Neighbourhood { get; set; }
         //includeEntities
         //?? İl ve ilçeye ulaşılabilirmi? 
-        public City City { get; set;}
-        public District District { get; set; }
-
+        public CityVM City { get; set; }
+        public DistrictVM District { get; set; }
     }
 }

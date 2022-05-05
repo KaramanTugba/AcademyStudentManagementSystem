@@ -21,7 +21,7 @@ namespace ASMSEntityLayer.Mappings
 
 
             //Yukarıdakinin aynısını tek seferde yapmak için, UserAddress ile VM yi birbirine dönüştürür.
-            CreateMap<UsersAddress,UserAddressVM>().ReverseMap();
+            CreateMap<UsersAddress,UsersAddressVM>().ReverseMap();
         }
     }
 }

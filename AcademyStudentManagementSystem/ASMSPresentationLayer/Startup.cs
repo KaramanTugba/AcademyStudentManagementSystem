@@ -28,30 +28,34 @@ namespace ASMSPresentationLayer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            //AspNet Core'un ConnectionString baðlantýsý yapabilmesi için yapýlandýrma servislerine dbcontext nesnesini eklemesi gerekmektedir.
+            //Aspnet Core'un ConnectionString baðlantýsý yapabilmesi için 
+            //yapýlandýrma servislerine dbcontext nesnesini eklemesi gerekir
             services.AddDbContext<MyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlConnection")));
+
+
             services.AddControllersWithViews();
-            services.AddRazorPages();//razor sayfalarý için
+            services.AddRazorPages(); // razor sayfalarý için
             services.AddMvc();
-            services.AddSession(options => options.IdleTimeout = TimeSpan.FromSeconds(20));//oturum zamaný
-            services.AddControllersWithViews();
-            //**************************
+            services.AddSession(options =>
+                options.IdleTimeout = TimeSpan.FromSeconds(20));
+            // oturum zamaný
+
+            //**************************************//
             services.AddIdentity<AppUser, AppRole>(options =>
             {
                 options.User.RequireUniqueEmail = true;
-                options.Password.RequiredLength = 6;
+                options.Password.RequiredLength = 3;
                 options.Password.RequireLowercase = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireDigit = false;
-                options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_@.";
+                options.User.AllowedUserNameCharacters =
+                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_@.";
             }).AddDefaultTokenProviders().AddEntityFrameworkStores<MyContext>();
 
             //Mapleme eklendi
             services.AddAutoMapper(typeof(Maps));
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -63,20 +67,20 @@ namespace ASMSPresentationLayer
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-            app.UseStaticFiles();//wwwroot klasörünün eriþimi içindir.
-
-            app.UseRouting();//Controller/Action/Id
-            app.UseSession();//Oturum mekanizmasýnýn kullanýlmasý için
-            app.UseAuthorization();//[Authorize] attribute için (yetki)
-            app.UseAuthentication();// Login logout iþlemlerinin gerektirdiði oturum iþleyiþlerini kullanabilmek için.
-
-            //MVC ile ayný kod bloðu endpoint in mekanizmasýnýn nasýl olacaðý belirleniyor
+            app.UseStaticFiles(); // wwwroot klasörünün eriþimi içindir.
+            app.UseRouting(); // Controller/Action/Id 
+            app.UseSession(); // Oturum mekanizmasýnýn kullanýlmasý için
+            app.UseAuthorization(); // [Authorize] attribute için (yetki)
+            app.UseAuthentication(); // Login Logout iþlemlerinin gerektirtiði oturum iþleyiþlerini kullanabilmek için.
+         
+            //MVC ile ayný kod bloðu endpoint'in mekanizmasýnýn nasýl olacaðý belirleniyor
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+            
         }
     }
 }

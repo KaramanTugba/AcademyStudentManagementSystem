@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ASMSEntityLayer.Models;
 namespace ASMSDataAccessLayer.ContractsDAL
 {
-    public interface IDistrictRepo:IRepositoryBase<District,int>
+  public  interface IDistrictRepo:IRepositoryBase<District,int>
     {
     }
 }

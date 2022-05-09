@@ -5,12 +5,15 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using ASMSDataAccessLayer.ContractsDAL;
+using ASMSEntityLayer.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ASMSDataAccessLayer.ImplementationsDAL
 {
-    public class RepositoryBase<T, Id> : IRepositoryBase<T, Id> where T : class, new()
+    public class RepositoryBase<T, Id> : IRepositoryBase<T, Id>
+        where T : class, new()
     {
+
         protected readonly MyContext _myContext;
         public RepositoryBase(MyContext myContext)
         {
@@ -22,11 +25,10 @@ namespace ASMSDataAccessLayer.ImplementationsDAL
             {
                 _myContext.Set<T>().Add(entity);
                 return _myContext.SaveChanges() > 0 ? true : false;
-                
-            }
-            catch (Exception ex)
-            {
 
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }
@@ -35,14 +37,11 @@ namespace ASMSDataAccessLayer.ImplementationsDAL
         {
             try
             {
-                
-                _myContext.Set<T>().Add(entity);
+                _myContext.Set<T>().Remove(entity);
                 return _myContext.SaveChanges() > 0 ? true : false;
-                
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
                 throw;
             }
         }
@@ -52,13 +51,15 @@ namespace ASMSDataAccessLayer.ImplementationsDAL
             try
             {
                 IQueryable<T> query = _myContext.Set<T>();
+
                 if (filter!=null)
                 {
                     query = query.Where(filter);
                 }
+
                 if (includeEntities!=null)
                 {
-                    foreach (var item in includeEntities.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+                    foreach (var item in includeEntities.Split(new char[] { ','},StringSplitOptions.RemoveEmptyEntries))
                     {
                         query = query.Include(item);
                     }
@@ -69,7 +70,7 @@ namespace ASMSDataAccessLayer.ImplementationsDAL
                 }
                 return query;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
@@ -80,12 +81,10 @@ namespace ASMSDataAccessLayer.ImplementationsDAL
         {
             try
             {
-
                 return _myContext.Set<T>().Find(id);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
                 throw;
             }
         }
@@ -94,25 +93,25 @@ namespace ASMSDataAccessLayer.ImplementationsDAL
         {
             try
             {
-                //select*from TableName
+                //select * from TableName
                 IQueryable<T> query = _myContext.Set<T>();
-                if (filter!=null)
+                if (filter != null)
                 {
-                    //select*from TableName where condition
-                    query = query.Where(filter);//where koşulu eklendi
+                    //select * from TableName where condition
+                    query = query.Where(filter); // where koşulu eklendi.
                 }
-                //ilişkili olduğu tabloyu dahil etmek için (innerjoin)
-                if (includeEntities!=null)
+
+                //ilişkili olduğu tabloyu dahil etmek için (inner join)
+                if (includeEntities != null)
                 {
-                    //var x = includeEntities.Split(',', StringSplitOptions.RemoveEmptyEntries);
-                   // var x = includeEntities.Split(new char[] { ',', '-' }, StringSplitOptions.RemoveEmptyEntries);
-                    foreach (var item in includeEntities.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))//x yerine yazdık
+                    foreach (var item in includeEntities.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                     {
-                        //inner join yaptık.
+                        // inner join yaptı
                         query = query.Include(item);
                     }
                 }
                 return query.FirstOrDefault();
+
             }
             catch (Exception)
             {
@@ -125,16 +124,20 @@ namespace ASMSDataAccessLayer.ImplementationsDAL
         {
             try
             {
-               
-                _myContext.Set<T>().Add(entity);
+                _myContext.Set<T>().Update(entity);
                 return _myContext.SaveChanges() > 0 ? true : false;
-               
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
                 throw;
             }
+        }
+
+
+        public void DEneme()
+        {
+
+
         }
     }
 }

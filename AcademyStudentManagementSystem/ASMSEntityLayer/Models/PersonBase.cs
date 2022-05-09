@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace ASMSEntityLayer.Models
 {
-    public abstract class  PersonBase
+    public abstract class PersonBase
     {
         [Key]
         [Column(Order=1)]
-        [StringLength(11,MinimumLength =11,ErrorMessage ="T.C. Kimlik numarası 11 karakter olmalıdır.")]
+        [StringLength(11, MinimumLength =11, ErrorMessage ="TCKimlik numarası 11 haneli olmalıdır!")]
         public string TCNumber { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ASMSEntityLayer.ResultModels
 {
-    public class ErrorResult:Result
+    public class ErrorResult : Result
     {
         public ErrorResult():base(false)
         {

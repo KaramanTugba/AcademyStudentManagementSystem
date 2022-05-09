@@ -1,9 +1,9 @@
-﻿using AutoMapper;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using ASMSEntityLayer.Models;
 using ASMSEntityLayer.ViewModels;
 
@@ -11,17 +11,23 @@ namespace ASMSEntityLayer.Mappings
 {
     public class Maps:Profile
     {
-        //Buraya Maps ctor gelecektir. İçerisine CreateMap methodu gelecek
+        // Buraya Maps ctor gelecek metodu gelecektir.
+        // İçine CreateMap metodu gelecek
         public Maps()
         {
-            ////UserAdress i UserAddressVM ye dönüştür.
-            //CreateMap<UsersAddress, UserAddressVM>(); //DAL -> BLL
-            ////UserAddressVM yi UserAddress e döniştür.
-            //CreateMap<UserAddressVM,UsersAddress>(); //PL ->BLL -> DAL
+            ////UserAddress'ı UserAddressesVM'ye dönüştür
+            //CreateMap<UsersAddress, UsersAddressVM>(); //DAL--> BLL
+            ////UserAddressVM'yi UserAddresses'e dönüştür
+            //CreateMap<UsersAddressVM, UsersAddress>(); //PL--> BLL--> DAL
+
+            //Yukarıdakinin aynısı tek seferde yapmak
+            // UserAddress ve VM'yi birbirine dönüştür.
+            CreateMap<UsersAddress, UsersAddressVM>().ReverseMap();
 
 
-            //Yukarıdakinin aynısını tek seferde yapmak için, UserAddress ile VM yi birbirine dönüştürür.
-            CreateMap<UsersAddress,UsersAddressVM>().ReverseMap();
         }
+
+
+
     }
 }

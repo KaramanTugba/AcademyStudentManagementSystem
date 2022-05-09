@@ -17,6 +17,6 @@ namespace ASMSBusinessLayer.ContractsBLL
         IDataResult<CityVM> GetById(int cityId);
         IDataResult<ICollection<CityVM>> GetAll();
         IDataResult<CityVM> GetFirstOrDefault();
-       // IDataResult<List<District>> CityDistricts();//UI dan yazılacak.
+
     }
 }

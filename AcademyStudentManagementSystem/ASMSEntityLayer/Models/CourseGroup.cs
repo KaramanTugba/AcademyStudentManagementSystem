@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 namespace ASMSEntityLayer.Models
 {
     [Table("CourseGroups")]
-    //[Index(nameof(PortalCode),IsUnique=true)] //Context classında OnModelCreating methodunu ezerek yazacağız.
-    public class CourseGroup:Base<int>
+    //[Index(nameof(PortalCode), IsUnique = true)] Seni Context classında OnModelCreating metodunu ezerek yazacağız.
+    public class CourseGroup : Base<int>
     {
         public int ClassId { get; set; }
         public string TeacherTCNumber { get; set; }
@@ -21,22 +21,21 @@ namespace ASMSEntityLayer.Models
         [DataType(DataType.Date)]
         public DateTime FinishDate { get; set; }
         public int Capasite { get; set; }
-
         [Required]
-        [StringLength(7,MinimumLength =7,ErrorMessage ="Kurs Portal numarası 7 karakter olmalıdır.")]
-        public string PortalCode { get; set; }  //1101064
+        [StringLength(7, MinimumLength = 7, ErrorMessage = "Kurs portal numarası 7 haneli olmalıdır!!")]
+        //TODO isunique eklensin
+        public string PortalCode { get; set; } //1090997 1101064
         //ilişki
         [ForeignKey("ClassId")]
-        public  virtual Class Class { get; set; }
+        public virtual Class Class { get; set; }
 
         [ForeignKey("TeacherTCNumber")]
         public virtual Teacher Teacher { get; set; }
-
         [ForeignKey("CourseId")]
         public virtual Course Course { get; set; }
 
         //ilişki karşılığı eğitimi alan öğrenciler listesi
         public virtual ICollection<StudentsCourseGroup> Students { get; set; }
-       
+
     }
 }

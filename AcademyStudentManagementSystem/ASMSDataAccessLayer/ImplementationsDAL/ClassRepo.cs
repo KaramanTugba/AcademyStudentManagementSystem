@@ -8,9 +8,10 @@ using ASMSEntityLayer.Models;
 
 namespace ASMSDataAccessLayer.ImplementationsDAL
 {
-  public class ClassRepo:RepositoryBase<Class,int>,IClassRepo
+   public class ClassRepo:RepositoryBase<Class,int>, IClassRepo
     {
-        public ClassRepo(MyContext myContext):base(myContext)
+        public ClassRepo(MyContext myContext)
+            :base(myContext)
         {
 
         }

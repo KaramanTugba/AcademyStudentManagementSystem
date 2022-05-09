@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ASMSEntityLayer.ResultModels
 {
-   public interface IResult
+    public interface IResult
     {
         bool IsSuccess { get; set; }
         string Message { get; set; }
-    }
 
+    }
 }

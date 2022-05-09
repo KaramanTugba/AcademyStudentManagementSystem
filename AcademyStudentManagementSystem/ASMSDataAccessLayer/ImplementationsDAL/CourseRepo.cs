@@ -8,7 +8,7 @@ using ASMSEntityLayer.Models;
 
 namespace ASMSDataAccessLayer.ImplementationsDAL
 {
-   public class CourseRepo:RepositoryBase<Course,int>,ICourseRepo
+   public class CourseRepo:RepositoryBase<Course,int>, ICourseRepo
     {
         public CourseRepo(MyContext myContext):base(myContext)
         {

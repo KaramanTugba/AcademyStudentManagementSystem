@@ -9,16 +9,14 @@ using System.Threading.Tasks;
 namespace ASMSEntityLayer.Models
 {
     [Table("Courses")]
-   public class Course:Base<int>
+    public class Course : Base<int>
     {
         [Required]
-        [StringLength(50,MinimumLength =2, ErrorMessage ="Kurs adı 2 ile 50 arasında olmalıdır.")]
+        [StringLength(50, MinimumLength = 2, ErrorMessage = "Kurs adı en az 2 en çok 50 karakter aralığında olmalıdır!!")]
         public string CourseName { get; set; }
 
-
         //ilişkinin karşılığı
-        public virtual ICollection<CourseGroup> CourseGroups { get; set; }
-
-
+        public virtual ICollection<CourseGroup> CourseGroups
+        { get; set; }
     }
 }

@@ -1,7 +1,11 @@
 ﻿using ASMSEntityLayer.IdentityModels;
 using ASMSEntityLayer.Models;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ASMSEntityLayer.ViewModels
 {
@@ -11,23 +15,18 @@ namespace ASMSEntityLayer.ViewModels
         public DateTime CreatedDate { get; set; }
         public bool IsDeleted { get; set; }
         public string UserId { get; set; }
-
         [Required]
-        [StringLength(50, MinimumLength = 2, ErrorMessage = "Adres başlığı 2 ile 50 karakter aralığında olmalıdır.")]
-        public string AddresTitle { get; set; }
-
-        [Required(ErrorMessage = "Mahalle seçimi gereklidir.")]
+        [StringLength(50, MinimumLength = 2, ErrorMessage = "Adres başlığı en az 2 en çok 50 karakter aralığında olmalıdır!!")]
+        public string AddressTitle { get; set; }
+        [Required(ErrorMessage = "Mahalle seçimi gereklidir!")]
         public int NeighbourhoodId { get; set; }
-
-        [StringLength(500, ErrorMessage = "Adres detayı en çok 500 karakter olmalıdır.")]
+        [StringLength(500, ErrorMessage = "Adres detayı en çok 500 karakter aralığında olabilir!!")]
         public string AddressDetails { get; set; }
-
-        [StringLength(5, MinimumLength = 5, ErrorMessage = "Posta kodu 5 karakter olmalıdır.")]
-        public string PostCode { get; set; }
+        [StringLength(5, MinimumLength = 5, ErrorMessage = "Posta Kodu 5 karakter olmalıdır!!")]
+        public string PostCode { get; set; } // 34000
         public AppUser AppUser { get; set; }
-        public NeighbourhoodVM Neighbourhood { get; set; }
-        //includeEntities
-        //?? İl ve ilçeye ulaşılabilirmi? 
+        public NeighbourhoodVM Neighbourhood { get; set; } //includeEntities
+        //TODO: ???? Aşağıdakilerle il ve ilçeye ulaşabilir miyim ?
         public CityVM City { get; set; }
         public DistrictVM District { get; set; }
     }

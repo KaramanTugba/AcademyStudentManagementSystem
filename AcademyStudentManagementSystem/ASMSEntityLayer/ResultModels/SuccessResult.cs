@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 
 namespace ASMSEntityLayer.ResultModels
 {
-    public class SuccessResult:Result
+    public class SuccessResult : Result
     {
-        public SuccessResult(bool success = true) :base(success)
+        public SuccessResult(bool success= true) : base(success)
         {
 
         }
-        // public SuccessResult() :base(true)
-        public SuccessResult(string message) : base(true,message)
+        //public SuccessResult() : base(true)
+        //{
+
+        //}
+        public SuccessResult(string message):base(true,message)
         {
 
         }
+
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ASMSEntityLayer.ResultModels
 {
-   public interface IDataResult<T>:IResult
+    public interface IDataResult<T> : IResult
     {
         T Data { get; set; }
     }

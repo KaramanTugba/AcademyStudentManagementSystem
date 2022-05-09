@@ -9,14 +9,13 @@ using System.Threading.Tasks;
 namespace ASMSEntityLayer.Models
 {
     [Table("Students")]
-    public class Student:PersonBase
+    public class Student : PersonBase
     {
         public string UserId { get; set; }
 
         [ForeignKey("UserId")]
         public virtual AppUser AppUser { get; set; }
-
-        //ilişkinin karşılığı öğrencinin kurslarını eğitimlerini listesi
+        // ilişkinin karşılığı öğrencinin kurslarının/eğitimlerinin listesi
         public virtual ICollection<StudentsCourseGroup> Courses { get; set; }
     }
 }

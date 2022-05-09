@@ -13,13 +13,12 @@ namespace ASMSEntityLayer.ViewModels
         public DateTime CreatedDate { get; set; }
         public bool IsDeleted { get; set; }
         [Required]
-        [StringLength(50, MinimumLength = 2, ErrorMessage = "Mahalle adı en az 2 en çok 50 karakter aralığında olmalıdır!")]
+        [StringLength(50, MinimumLength = 2, ErrorMessage = "Mahalle adı en az 2 en çok 50 karakter aralığında olmalıdır!!")]
         public string NeighbourhoodName { get; set; }
-
         public int DistrictId { get; set; }
-
         public DistrictVM District { get; set; }
-
         public ICollection<UsersAddressVM> UsersAddresses { get; set; }
+
+
     }
 }

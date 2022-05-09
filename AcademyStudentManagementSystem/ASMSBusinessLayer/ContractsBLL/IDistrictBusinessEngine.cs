@@ -10,19 +10,22 @@ namespace ASMSBusinessLayer.ContractsBLL
 {
     public interface IDistrictBusinessEngine
     {
-        /// <summary>
-        /// This method will return all districts.
-        /// Bu methot tüm ilçeleri getirir.
-        /// </summary>
-        /// <returns></returns>
-        //Buraya ekleme silme güncelleme vb metot imzaları yazıllabilir.
-        //Biz şuan sadece ihtiyacımız olanları yazacağız.
-        IDataResult<ICollection<DistrictVM>> GetAllDistricts();
+        // Buraya ekleme silme güncelleme vb metot imzaları 
+        // yazılabilir
+
+        // Biz şuanda sadece ihtiyacımız olanları yazalım
 
         /// <summary>
-        /// This method will give districts of city
+        /// This method will return all distrcits.
+        /// Bu metot tüm ilçeleri getirir
         /// </summary>
-        /// <param name="cityId"></param>
+        /// <returns></returns>
+        IDataResult<ICollection<DistrictVM>> GetAllDistricts();
+        /// <summary>
+        /// This method will give districts of a city
+        /// Örneğin, istanbu'un ilçeleri
+        /// </summary>
+        /// <param name="cityId">Buraya byte türünde değer gönderiniz</param>
         /// <returns></returns>
         IDataResult<ICollection<DistrictVM>> GetDistrictsOfCity(byte cityId);
     }

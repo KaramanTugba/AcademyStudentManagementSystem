@@ -7,8 +7,7 @@ using ASMSEntityLayer.Models;
 
 namespace ASMSDataAccessLayer.ContractsDAL
 {
-    public interface ICityRepo:IRepositoryBase<City,byte>
+    public interface ICityRepo: IRepositoryBase<City,byte>
     {
-
     }
 }

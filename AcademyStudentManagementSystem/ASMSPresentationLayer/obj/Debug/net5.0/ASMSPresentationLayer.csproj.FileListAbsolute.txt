@@ -158,3 +158,5 @@ C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentMan
 C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\ASMSPresentationLayer.genruntimeconfig.cache
 C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Views\Shared\_LayoutASMS.cshtml.g.cs
+C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Views\Shared\Partials\_HeaderPartial.cshtml.g.cs
+C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Views\Shared\Partials\_FooterPartial.cshtml.g.cs

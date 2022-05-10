@@ -321,10 +321,10 @@ a.btn.work {
         content: attr(data-text);
         position: absolute;
         overflow: hidden;
-        max-width: 10em;
+        max-width: 30px;
         white-space: nowrap;
         color: #fff;
-        animation: loading 8s linear;
+        animation: loading 10s linear;
     }
 
 @keyframes loading {

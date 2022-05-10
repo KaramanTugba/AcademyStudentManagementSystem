@@ -14,6 +14,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using ASMSEntityLayer.Mappings;
 using ASMSBusinessLayer.EmailService;
+using ASMSBusinessLayer.ImplementationsBLL;
+using ASMSBusinessLayer.ContractsBLL;
 
 namespace ASMSPresentationLayer
 {
@@ -31,7 +33,7 @@ namespace ASMSPresentationLayer
         {
             //Aspnet Core'un ConnectionString baðlantýsý yapabilmesi için 
             //yapýlandýrma servislerine dbcontext nesnesini eklemesi gerekir
-            services.AddDbContext<MyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlConnection")));
+            services.AddDbContext<MyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlConnection")),ServiceLifetime.Scoped);
 
 
             services.AddControllersWithViews();
@@ -57,10 +59,13 @@ namespace ASMSPresentationLayer
             //Mapleme eklendi
             services.AddAutoMapper(typeof(Maps));
 
-            services.AddScoped<IEmailSender, EmailSender>();
+            services.AddSingleton<IEmailSender, EmailSender>();
+            services.AddScoped<IStudentBusinessEngine, StudentBusinessEngine>();
+            services.AddScoped<ASMSDataAccessLayer.ContractsDAL.IUnitOfWork, ASMSDataAccessLayer.ImplementationsDAL.UnitOfWork>();
+
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,RoleManager<AppRole> roleManager)
         {
             if (env.IsDevelopment())
             {
@@ -75,7 +80,10 @@ namespace ASMSPresentationLayer
             app.UseSession(); // Oturum mekanizmasýnýn kullanýlmasý için
             app.UseAuthorization(); // [Authorize] attribute için (yetki)
             app.UseAuthentication(); // Login Logout iþlemlerinin gerektirtiði oturum iþleyiþlerini kullanabilmek için.
-         
+
+            //rolleri oluþturacak static metot çaðýrýldý
+            CreateDefaultData.CreateData.Create(roleManager);
+
             //MVC ile ayný kod bloðu endpoint'in mekanizmasýnýn nasýl olacaðý belirleniyor
             app.UseEndpoints(endpoints =>
             {

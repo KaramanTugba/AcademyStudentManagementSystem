@@ -161,3 +161,4 @@ C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentMan
 C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Views\Shared\Partials\_HeaderPartial.cshtml.g.cs
 C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Views\Shared\Partials\_FooterPartial.cshtml.g.cs
 C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Views\Shared\Components\Register\Default.cshtml.g.cs
+C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Views\Shared\Components\Login\Default.cshtml.g.cs

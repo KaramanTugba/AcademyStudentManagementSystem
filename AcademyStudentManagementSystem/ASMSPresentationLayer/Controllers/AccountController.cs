@@ -35,11 +35,11 @@ namespace ASMSPresentationLayer.Controllers
             _studentBusinessEngine = studentBusinessEngine;
         }
 
-        [HttpGet]
-        public IActionResult Register()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public IActionResult Register()
+        //{
+        //    return View();
+        //}
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
@@ -47,19 +47,24 @@ namespace ASMSPresentationLayer.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    return View(model);
+                    //return View(model);
+                    TempData["RegisterFailedMessage"] = "Veri girişlerini istenildiği gibi yapmadınız. Tekrar deneyiniz";
+                    return RedirectToAction("Index", "Home");
                 }
 
                 //Aynı emailden tekrar kayıt olunmasın
                 var checkUserForEmail = await _userManager.FindByEmailAsync(model.Email);
                 if (checkUserForEmail != null)
                 {
-                    ModelState.AddModelError("", "Bu email ile zaten sisteme kayıt yapılmıştır!");
-                    return View(model);
+                    //ModelState.AddModelError("", "Bu email ile zaten sisteme kayıt yapılmıştır!");
+                    //return View(model);
+                    TempData["RegisterFailedMessage"] = "Bu mail adresi sistemde kayıtlıdır. Farklı bir mail ile kayıt olunuz.";
+                    return RedirectToAction("Index", "Home");
                 }
                 //user'ı oluşturalım
                 AppUser newUser = new AppUser()
                 {
+                    TCNumber=model.TCNumber,
                     Email = model.Email,
                     Name = model.Name,
                     Surname = model.Surname,
@@ -102,13 +107,17 @@ namespace ASMSPresentationLayer.Controllers
                         Body = "Merhaba, Sisteme kaydınız gerçekleşmiştir...",
                         Contacts = new string[] { model.Email }
                     };
-                    return RedirectToAction("Login", "Account", new {email=model.Email });
+                    await _emailSender.SendMessage(emailToStudent);
+                    TempData["RegisterSuccessMessage"] = "Sisteme kaydınız başarıyla gerçekleşmiştir.";
+                    return RedirectToAction("Index", "Account", new { email = model.Email });
 
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Beklenmedik bir sorun oldu. Üye kaydı başarısız tekrar deneyiniz!");
-                    return View(model);
+                    TempData["RegisterFailedMessage"] = "Beklenmedik bir sorun oldu. Üye kaydı başarısız tekrar deneyiniz!";
+                    return RedirectToAction("Index", "Home");
+                    //ModelState.AddModelError("", "Beklenmedik bir sorun oldu. Üye kaydı başarısız tekrar deneyiniz!");
+                    //return View(model);
                 }
                 
             }

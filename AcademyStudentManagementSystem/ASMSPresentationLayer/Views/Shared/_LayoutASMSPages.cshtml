@@ -51,7 +51,12 @@
     <!-- mian-content -->
     <header class="index-banner" id="home">
         <partial name="Partials/_HeaderPartial" />
-        
+        <!--banner-->
+        <div class="banner_section_pages">
+
+
+        </div>
+        <!--//banner-->
     </header>
     <!-- //header -->
     <!--// banner-slider -->
@@ -242,7 +247,8 @@
     <!-- //js -->
 
     <script src="~/ASMS-THEME/js/bootstrap.js"></script>
-
+    @RenderSection("Scripts",required:false)
+    @*@await RenderSection("Scripts", required: false)*@ 
 </body>
 
 </html>

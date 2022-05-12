@@ -23,8 +23,12 @@
             <div class="form-group">
                 <span class="text-danger" style="font-weight:bold; margin-right:3px;">*</span>
                 <label for="City" style="font-weight:bold">İl</label>
-                <select id="CitySelect" name="City" class="form-control" required>
+                <select id="CitySelect" name="City" class="form-control" style="padding:3px" required>
                     <option value="0" selected>***İl Seçiniz***</option>
+                    @foreach (var item in ViewBag.Cities)
+                    {
+                        <option value="@item.Id">@item.CityName</option>
+                    }
                 </select>
             </div>
 
@@ -59,3 +63,32 @@
     </div>
 
 </div>
+
+@section Scripts{ 
+<script>
+    $(document).ready(function () {
+        //sayfa ilk açıldığında bazı combolar pasif olacak
+
+
+    });
+
+    $('#CitySelect').on('change', function () {
+        //ilçeyi temizle
+        var $district = $("#DistrictSelect");
+        $district.empty();
+        $district.append("<option value='0' selected>*** İl Seçiniz ***</option>");
+
+        //mahalleyi temizle
+        var $neighbourhood = $("#NeighbourhoodSelect");
+        $district.empty();
+        $district.append("<option value='0' selected>*** Mahalle Seçiniz ***</option>");
+
+        var cityId = this.value;
+        //Eğer seçilen ilin id'si sıfırdan büyükse ajax ile ilçeleri getir
+
+        if (cityId>0) {
+            //to be continued
+        }
+    })
+</script>
+}

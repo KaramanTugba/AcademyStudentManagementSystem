@@ -61,10 +61,10 @@ namespace ASMSBusinessLayer.ImplementationsBLL
                     $"{allCities.Count} adet il listelendi");
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
 

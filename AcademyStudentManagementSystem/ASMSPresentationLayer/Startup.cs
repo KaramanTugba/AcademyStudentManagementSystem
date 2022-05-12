@@ -36,7 +36,7 @@ namespace ASMSPresentationLayer
             services.AddDbContext<MyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlConnection")));
 
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();//Proje çalýþýrken razor sayfalarýnda yapýlan deðiþiklikleranýnda sayfaya yansýmasý için eklendi.
             services.AddRazorPages(); // razor sayfalarý için
             services.AddMvc();
             services.AddSession(options =>
@@ -62,7 +62,10 @@ namespace ASMSPresentationLayer
             services.AddSingleton<IEmailSender, EmailSender>();
             services.AddScoped<IStudentBusinessEngine, StudentBusinessEngine>();
             services.AddScoped<IUsersAddressBusinessEngine, UsersAddressBusinessEngine>();
+            services.AddScoped<ICityBusinessEngine, CityBusinessEngine>();
+            services.AddScoped<IDistrictBusinessEngine, DistrictBusinessEngine>();
             services.AddScoped<ASMSDataAccessLayer.ContractsDAL.IUnitOfWork, ASMSDataAccessLayer.ImplementationsDAL.UnitOfWork>();
+            
 
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

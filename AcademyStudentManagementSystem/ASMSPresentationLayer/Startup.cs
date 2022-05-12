@@ -61,6 +61,7 @@ namespace ASMSPresentationLayer
 
             services.AddSingleton<IEmailSender, EmailSender>();
             services.AddScoped<IStudentBusinessEngine, StudentBusinessEngine>();
+            services.AddScoped<IUsersAddressBusinessEngine, UsersAddressBusinessEngine>();
             services.AddScoped<ASMSDataAccessLayer.ContractsDAL.IUnitOfWork, ASMSDataAccessLayer.ImplementationsDAL.UnitOfWork>();
 
         }

@@ -40,8 +40,15 @@ using ASMSEntityLayer.IdentityModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\Views\_ViewImports.cshtml"
+using ASMSEntityLayer.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a33c623bdd132e493576bfe4a47917adaacb7943", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"94116046fbd9a82dbe7e1d5d6e0c72c1c3f6fafe", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     #nullable disable

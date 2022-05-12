@@ -40,8 +40,15 @@ using ASMSEntityLayer.IdentityModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\Views\_ViewImports.cshtml"
+using ASMSEntityLayer.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"370769652036bcf2a779168071e2b74538007206", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a33c623bdd132e493576bfe4a47917adaacb7943", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"94116046fbd9a82dbe7e1d5d6e0c72c1c3f6fafe", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable

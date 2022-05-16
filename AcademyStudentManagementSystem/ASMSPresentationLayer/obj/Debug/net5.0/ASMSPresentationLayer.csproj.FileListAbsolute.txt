@@ -446,3 +446,9 @@ C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentMan
 C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\ASMSPresentationLayer.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Areas\Management\Views\Shared\_LayoutAdmin.cshtml.g.cs
+C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Areas\Management\Views\_ViewImports.cshtml.g.cs
+C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Areas\Management\Views\_ViewStart.cshtml.g.cs
+C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Areas\Management\Views\Admin\Register.cshtml.g.cs
+C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Areas\Management\Views\Admin\Login.cshtml.g.cs
+C:\Users\303TUGBA_SABAH\Desktop\AcademyStudentManagementSystem\AcademyStudentManagementSystem\ASMSPresentationLayer\obj\Debug\net5.0\Razor\Areas\Management\Views\Admin\Dashboard.cshtml.g.cs

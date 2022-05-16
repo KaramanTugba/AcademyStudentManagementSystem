@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using ASMSEntityLayer.Mappings;
 using ASMSBusinessLayer.EmailService;
-using ASMSBusinessLayer.ImplementationsBLL;
 using ASMSBusinessLayer.ContractsBLL;
+using ASMSBusinessLayer.ImplementationsBLL;
 
 namespace ASMSPresentationLayer
 {
@@ -36,7 +36,9 @@ namespace ASMSPresentationLayer
             services.AddDbContext<MyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlConnection")));
 
 
-            services.AddControllersWithViews().AddRazorRuntimeCompilation();//Proje çalýþýrken razor sayfalarýnda yapýlan deðiþiklikleranýnda sayfaya yansýmasý için eklendi.
+            services.AddControllersWithViews()
+                .AddRazorRuntimeCompilation(); //Proje çalýþýrken razor sayfalarýnda yapýlan deðiþiklikler anýnda sayfaya yansýmasý için eklendi.
+
             services.AddRazorPages(); // razor sayfalarý için
             services.AddMvc();
             services.AddSession(options =>
@@ -66,11 +68,9 @@ namespace ASMSPresentationLayer
             services.AddScoped<IDistrictBusinessEngine, DistrictBusinessEngine>();
             services.AddScoped<INeighbourhoodBusinessEngine, NeighbourhoodBusinessEngine>();
             services.AddScoped<ASMSDataAccessLayer.ContractsDAL.IUnitOfWork, ASMSDataAccessLayer.ImplementationsDAL.UnitOfWork>();
-            
-
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,RoleManager<AppRole> roleManager)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, RoleManager<AppRole> roleManager)
         {
             if (env.IsDevelopment())
             {
@@ -83,11 +83,11 @@ namespace ASMSPresentationLayer
             app.UseStaticFiles(); // wwwroot klasörünün eriþimi içindir.
             app.UseRouting(); // Controller/Action/Id 
             app.UseSession(); // Oturum mekanizmasýnýn kullanýlmasý için
-            
+
             app.UseAuthentication(); // Login Logout iþlemlerinin gerektirtiði oturum iþleyiþlerini kullanabilmek için.
+
             app.UseAuthorization(); // [Authorize] attribute için (yetki)
 
-            //rolleri oluþturacak static metot çaðýrýldý
             CreateDefaultData.CreateData.Create(roleManager);
 
             //MVC ile ayný kod bloðu endpoint'in mekanizmasýnýn nasýl olacaðý belirleniyor
@@ -96,8 +96,21 @@ namespace ASMSPresentationLayer
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                //endpoints.MapAreaControllerRoute(
+                //   name: "management",
+                //   areaName:"management",
+                //   pattern: "{area:management}/{controller=Admin}/{action=Login}/{id?}"
+                //    );
+                endpoints.MapAreaControllerRoute(
+                  "management",
+                  "management",
+                  "management/{controller=Admin}/{action=Register}/{id?}"
+                  );
+                
             });
-            
+
+
         }
     }
 }

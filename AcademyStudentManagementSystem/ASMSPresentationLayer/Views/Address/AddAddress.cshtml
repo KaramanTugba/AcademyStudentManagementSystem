@@ -35,7 +35,7 @@
             <div class="form-group">
                 <span class="text-danger" style="font-weight:bold; margin-right:3px;">*</span>
                 <label for="District" style="font-weight:bold">İlçe</label>
-                <select id="DistrictSelect" name="District" class="form-control" required>
+                <select id="DistrictSelect" name="District" class="form-control" style="padding:3px" required>
                     <option value="0" selected>***İlçe Seçiniz***</option>
                 </select>
             </div>
@@ -43,7 +43,7 @@
             <div class="form-group">
                 <span class="text-danger" style="font-weight:bold; margin-right:3px;">*</span>
                 <label for="Neighbourhood" style="font-weight:bold">Mahalle</label>
-                <select id="NeighbourhoodSelect" name="Neighbourhood" class="form-control" required>
+                <select id="NeighbourhoodSelect" asp-for="NeighbourhoodId" class="form-control" required>
                     <option value="0" selected>***Mahalle Seçiniz***</option>
                 </select>
             </div>
@@ -58,6 +58,18 @@
                 <label asp-for="PostCode"></label>
                 <input asp-for="PostCode" class="form-control" />
             </div>
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <input value="Adres Ekle" type="submit"
+                           id="btnAddAddress"
+                           class="btn btn-block btn-default" style="background-color:darkblue;color:white;float:left" />
+                </div>
+
+                <div class="col-md-6">
+                    <input type="button" class="btn btn-block btn-default"
+                           id="btnClear" value="Temizle" style="background-color:white;color:darkblue;float:right" />
+                </div>
+            </div>
 
         </form>
     </div>
@@ -68,7 +80,12 @@
 <script>
     $(document).ready(function () {
         //sayfa ilk açıldığında bazı combolar pasif olacak
-
+        var $district = $("#DistrictSelect");
+        $district.attr("disabled", true); // pasif hale getirdik
+        var $neighbourhood = $("#NeighbourhoodSelect");
+        $neighbourhood.attr("disabled", true); // pasif hale getirdik
+        var $btn = $("#btnAddAddress");
+        $btn.attr("disabled", true); // buton pasif olsun
 
     });
 
@@ -86,9 +103,75 @@
         var cityId = this.value;
         //Eğer seçilen ilin id'si sıfırdan büyükse ajax ile ilçeleri getir
 
-        if (cityId>0) {
-            //to be continued
+        if (cityId > 0) {
+            $.ajax({
+                type: "GET",
+                url: '/District/GetCityDistricts/' + cityId,
+                success: function (res) {
+                    var $district = $("#DistrictSelect"); // ilçe combosunu seçtik
+                    //var d = document.getElementById("DistrictSelect");
+                    $district.empty(); // içini temizledik
+                    $district.attr("disabled", false); // aktif hale getirdik
+                    //Bu bir jquery foreach döngüsüdür.
+                    //AJAX sonucu gelen json data sonucunun her birini ilçe combosuna ekledik
+                    $.each(res.data, function () {
+                        $district
+                            .append($("<option />").val(this.id).text(this.districtName));
+                        /* $district.append("<option value=" + this.id + ">" + this.districtName+"</option>");*/
+                    });
+                },
+                error: function (err) {
+                    console.log(err);
+                    $district.append("<option value='0' selected>***İlçe Seçiniz***</option>");
+                    //$district.append("<option />").val(0).text("İlçe Seçiniz");
+                    $district.attr("disabled", true); // aktif hale getirdik
+                }
+            });
         }
+    });
+    $("#DistrictSelect").on('change', function () {
+        //mahalle combosu temizlensin
+        var $neighbourhood = $("#NeighbourhoodSelect");
+        $neighbourhood.empty();
+        $neighbourhood.append("<option value='0' selected>***Mahalle Seçiniz***</option>");
+        //districtId alınmalı ve Neighbourhood controllera gönderilmeli
+        var districtId = this.value;
+        if (districtId > 0) {
+            //ilçe seçilince mahalleri getirsin
+            $.ajax({
+                type: "GET",
+                url: '/Neighbourhood/GetDistrictNeighbourhoods/' + districtId,
+                success: function (res) {
+                    var $neighbourhood = $("#NeighbourhoodSelect");
+                    $neighbourhood.empty();
+                    $neighbourhood.attr("disabled", false);
+                    $.each(res.data, function () {
+                        $neighbourhood
+                            .append($("<option />").val(this.id).text(this.neighbourhoodName));
+
+                    });
+                    //var $btn = $("#btnAddAddress");
+                    //$btn.attr("disabled", false); // buton pasif olsun
+                    $("#btnAddAddress").attr("disabled", false); // buton pasif olsun
+
+                },
+                error: function (err) {
+                    console.log(err);
+                    alert("Mahaller getirilemedi! Tekrar deneyiniz");
+                }
+            });
+            $("#btnClear").on("click", function () {
+                ////// sayfa ilk açıldığında bazı combolar pasif olacak
+                ////var $district = $("#DistrictSelect");
+                ////$district.attr("disabled", true); // pasif hale getirdik
+                ////var $neighbourhood = $("#NeighbourhoodSelect");
+                ////$neighbourhood.attr("disabled", true); // pasif hale getirdik
+                ////var $btn = $("#btnAddAddress");
+                ////$btn.attr("disabled", true); // buton pasif olsun
+                // temizle butonuna tıklandı
+                //$("#CitySelect").val(0).trigger("change");
+                //Merve
+                window.open('/Address/AddAddress', "_self");
     })
 </script>
 }

@@ -44,7 +44,7 @@ namespace ASMSBusinessLayer.ImplementationsBLL
                 if (userId!=null)
                 {
                     var userAddressList = _unitOfWork
-                        .UsersAddressRepo.GetAll(x=> x.UserId== userId);
+                        .UsersAddressRepo.GetAll(x => x.UserId == userId,includeEntities: "Neighbourhood");
                     var result = _mapper.Map<IQueryable<UsersAddress>, ICollection<UsersAddressVM>>(userAddressList);
 
                     return new SuccessDataResult<ICollection<UsersAddressVM>>(result, $"{result.Count} address has been found");
@@ -58,7 +58,7 @@ namespace ASMSBusinessLayer.ImplementationsBLL
             catch (Exception)
             {
 
-                throw;
+                throw ;
             }
         }
     }
